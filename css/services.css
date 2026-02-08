@@ -1,6 +1,6 @@
 /* ==========================================
-   CONTACT PAGE STYLES - AutoCare Pro
-   Modern, responsive design for contact page
+   SERVICES PAGE STYLES - AutoCare Pro
+   Modern, responsive design for services page
    ========================================== */
 
 /* CSS Variables (matching home page) */
@@ -13,7 +13,6 @@
     --text-light: #6b7280;
     --border-color: #e5e7eb;
     --success-color: #10b981;
-    --error-color: #ef4444;
     --white: #ffffff;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -131,231 +130,85 @@ body {
 }
 
 /* ==========================================
-   CONTACT SECTION
+   SERVICES SECTION
    ========================================== */
-.contact-section {
+.services-section {
     padding: 5rem 0;
-    background-color: var(--light-color);
-}
-
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
-.contact-form-container {
     background-color: var(--white);
-    padding: 3rem;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-detail:last-child {
+    border-bottom: none;
+}
+
+/* Alternate layout for every other service */
+.service-detail.reverse {
+    grid-template-columns: 1fr 150px;
+}
+
+.service-detail.reverse .service-icon-large {
+    order: 2;
+}
+
+.service-detail.reverse .service-info {
+    order: 1;
+}
+
+.service-icon-large {
+    font-size: 6rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-color) 0%, var(--border-color) 100%);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
 }
 
-.contact-form-container h2 {
-    font-size: 2rem;
-    color: var(--dark-color);
-    margin-bottom: 2rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 600;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.875rem;
-    border: 2px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.form-group input.error,
-.form-group textarea.error {
-    border-color: var(--error-color);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.error-message {
-    color: var(--error-color);
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    display: none;
-}
-
-.error-message.show {
-    display: block;
-}
-
-.success-message {
-    background-color: #d1fae5;
-    color: #065f46;
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 1rem;
-    border-left: 4px solid var(--success-color);
-}
-
-.success-message p {
-    margin: 0;
-}
-
-/* ==========================================
-   CONTACT INFO
-   ========================================== */
-.contact-info-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contact-info-container h2 {
+.service-info h2 {
     font-size: 2rem;
     color: var(--dark-color);
     margin-bottom: 1rem;
 }
 
-.contact-info {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-}
-
-.info-item {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.info-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.info-item:first-child {
-    padding-top: 0;
-}
-
-.info-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.info-content h3 {
-    font-size: 1.125rem;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.info-content p {
+.service-info > p {
     color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.service-features li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
     line-height: 1.7;
 }
 
-.info-content a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.info-content a:hover {
-    color: #1e40af;
-    text-decoration: underline;
-}
-
-/* ==========================================
-   MAP CONTAINER
-   ========================================== */
-.map-container {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-}
-
-.map-placeholder {
-    height: 300px;
-    background: linear-gradient(135deg, var(--light-color) 0%, var(--border-color) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.map-placeholder p:first-child {
-    font-size: 4rem;
-}
-
-.map-note {
-    color: var(--text-light);
-    font-size: 0.875rem;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-/* ==========================================
-   EMERGENCY BANNER
-   ========================================== */
-.emergency-banner {
-    background-color: var(--dark-color);
-    color: var(--white);
-    padding: 3rem 0;
-    text-align: center;
-}
-
-.emergency-banner h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.emergency-banner p {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-}
-
-.btn-emergency {
-    background-color: var(--error-color);
-    color: var(--white);
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-}
-
-.btn-emergency:hover {
-    background-color: #dc2626;
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 /* ==========================================
@@ -376,13 +229,44 @@ body {
 .btn-primary {
     background-color: var(--primary-color);
     color: var(--white);
-    border: none;
 }
 
 .btn-primary:hover {
     background-color: #1e40af;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+.btn-light {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-light:hover {
+    background-color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   CALL TO ACTION
+   ========================================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
 }
 
 /* ==========================================
@@ -510,13 +394,29 @@ body {
         font-size: 2.5rem;
     }
 
-    .contact-wrapper {
+    .service-detail,
+    .service-detail.reverse {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 2rem 0;
     }
 
-    .contact-form-container {
-        padding: 2rem;
+    .service-detail.reverse .service-icon-large,
+    .service-detail.reverse .service-info {
+        order: initial;
+    }
+
+    .service-icon-large {
+        margin: 0 auto;
+    }
+
+    .service-info h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .service-info > p {
+        text-align: center;
     }
 }
 
@@ -529,30 +429,23 @@ body {
         font-size: 1rem;
     }
 
-    .contact-form-container {
-        padding: 1.5rem;
+    .service-icon-large {
+        width: 120px;
+        height: 120px;
+        font-size: 4rem;
     }
 
-    .contact-form-container h2,
-    .contact-info-container h2 {
+    .service-info h2 {
         font-size: 1.5rem;
     }
 
-    .contact-info {
-        padding: 1.5rem;
-    }
-
-    .info-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .emergency-banner h2 {
-        font-size: 1.5rem;
+    .cta-section h2 {
+        font-size: 1.75rem;
     }
 
     .btn {
         width: 100%;
+        max-width: 300px;
     }
 
     .whatsapp-float {

@@ -1,6 +1,6 @@
 /* ==========================================
-   CONTACT PAGE STYLES - AutoCare Pro
-   Modern, responsive design for contact page
+   ABOUT PAGE STYLES - AutoCare Pro
+   Modern, responsive design for about page
    ========================================== */
 
 /* CSS Variables (matching home page) */
@@ -13,7 +13,6 @@
     --text-light: #6b7280;
     --border-color: #e5e7eb;
     --success-color: #10b981;
-    --error-color: #ef4444;
     --white: #ffffff;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -21,7 +20,7 @@
     --transition: all 0.3s ease;
 }
 
-/* Base styles */
+/* Import common styles from home.css */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +41,7 @@ body {
 }
 
 /* ==========================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION (Same as home)
    ========================================== */
 .main-header {
     background-color: var(--white);
@@ -131,236 +130,226 @@ body {
 }
 
 /* ==========================================
-   CONTACT SECTION
+   COMPANY STORY SECTION
    ========================================== */
-.contact-section {
+.company-story {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.story-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--light-color) 0%, var(--border-color) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+}
+
+/* ==========================================
+   MISSION & VALUES SECTION
+   ========================================== */
+.mission-values {
     padding: 5rem 0;
     background-color: var(--light-color);
 }
 
-.contact-wrapper {
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+.values-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
-.contact-form-container {
-    background-color: var(--white);
-    padding: 3rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-}
-
-.contact-form-container h2 {
-    font-size: 2rem;
-    color: var(--dark-color);
-    margin-bottom: 2rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 600;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.875rem;
-    border: 2px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.form-group input.error,
-.form-group textarea.error {
-    border-color: var(--error-color);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.error-message {
-    color: var(--error-color);
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    display: none;
-}
-
-.error-message.show {
-    display: block;
-}
-
-.success-message {
-    background-color: #d1fae5;
-    color: #065f46;
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 1rem;
-    border-left: 4px solid var(--success-color);
-}
-
-.success-message p {
-    margin: 0;
-}
-
-/* ==========================================
-   CONTACT INFO
-   ========================================== */
-.contact-info-container {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-.contact-info-container h2 {
-    font-size: 2rem;
+.value-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
     color: var(--dark-color);
     margin-bottom: 1rem;
 }
 
-.contact-info {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-}
-
-.info-item {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.info-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.info-item:first-child {
-    padding-top: 0;
-}
-
-.info-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.info-content h3 {
-    font-size: 1.125rem;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.info-content p {
+.value-card p {
     color: var(--text-light);
     line-height: 1.7;
 }
 
-.info-content a {
-    color: var(--primary-color);
-    text-decoration: none;
+/* ==========================================
+   TEAM SECTION
+   ========================================== */
+.team-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
     transition: var(--transition);
 }
 
-.info-content a:hover {
-    color: #1e40af;
-    text-decoration: underline;
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
-/* ==========================================
-   MAP CONTAINER
-   ========================================== */
-.map-container {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-}
-
-.map-placeholder {
-    height: 300px;
-    background: linear-gradient(135deg, var(--light-color) 0%, var(--border-color) 100%);
+.member-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    font-size: 3rem;
 }
 
-.map-placeholder p:first-child {
-    font-size: 4rem;
-}
-
-.map-note {
-    color: var(--text-light);
-    font-size: 0.875rem;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-/* ==========================================
-   EMERGENCY BANNER
-   ========================================== */
-.emergency-banner {
-    background-color: var(--dark-color);
-    color: var(--white);
-    padding: 3rem 0;
-    text-align: center;
-}
-
-.emergency-banner h2 {
-    font-size: 2rem;
+.team-member h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
     margin-bottom: 0.5rem;
 }
 
-.emergency-banner p {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+.member-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-.btn-emergency {
-    background-color: var(--error-color);
-    color: var(--white);
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-}
-
-.btn-emergency:hover {
-    background-color: #dc2626;
+.member-bio {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.9375rem;
 }
 
 /* ==========================================
-   BUTTONS
+   CERTIFICATIONS SECTION
    ========================================== */
+.certifications {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.cert-badge {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.cert-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cert-badge p {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* ==========================================
+   CALL TO ACTION
+   ========================================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+    color: var(--white);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -374,19 +363,18 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
 }
 
 .btn-primary:hover {
-    background-color: #1e40af;
+    background-color: #f59e0b;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
 /* ==========================================
-   FOOTER
+   FOOTER (Same as home)
    ========================================== */
 .main-footer {
     background-color: var(--dark-color);
@@ -510,13 +498,18 @@ body {
         font-size: 2.5rem;
     }
 
-    .contact-wrapper {
+    .story-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .contact-form-container {
-        padding: 2rem;
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .team-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -529,30 +522,21 @@ body {
         font-size: 1rem;
     }
 
-    .contact-form-container {
-        padding: 1.5rem;
+    .section-title {
+        font-size: 1.75rem;
     }
 
-    .contact-form-container h2,
-    .contact-info-container h2 {
-        font-size: 1.5rem;
+    .story-content h2 {
+        font-size: 2rem;
     }
 
-    .contact-info {
-        padding: 1.5rem;
+    .image-placeholder {
+        height: 300px;
+        font-size: 6rem;
     }
 
-    .info-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .emergency-banner h2 {
-        font-size: 1.5rem;
-    }
-
-    .btn {
-        width: 100%;
+    .cta-section h2 {
+        font-size: 1.75rem;
     }
 
     .whatsapp-float {
