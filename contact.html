@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AutoCare Pro - Get a quote or schedule your service today">
+    <title>Contact Us - Auto Repair Shop</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>AutoCare Pro</h1>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch for a free consultation and quote</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    placeholder="John Doe"
+                                    aria-required="true">
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    placeholder="john@example.com"
+                                    aria-required="true">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="(555) 123-4567">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="engine">Engine Repair</option>
+                                    <option value="brake">Brake Service</option>
+                                    <option value="oil">Oil Change</option>
+                                    <option value="battery">Battery Service</option>
+                                    <option value="ac">AC Service</option>
+                                    <option value="transmission">Transmission</option>
+                                    <option value="tire">Tire Service</option>
+                                    <option value="suspension">Suspension</option>
+                                    <option value="maintenance">Preventive Maintenance</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    required 
+                                    placeholder="Tell us about your vehicle and the service you need..."
+                                    aria-required="true"></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        <div id="formSuccess" class="success-message" style="display: none;">
+                            <p>✓ Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-container">
+                        <h2>Visit Us</h2>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon">📍</div>
+                                <div class="info-content">
+                                    <h3>Address</h3>
+                                    <p>789 Centre Street<br>Calgary, AB T2P 1J9<br>Canada</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">📞</div>
+                                <div class="info-content">
+                                    <h3>Phone</h3>
+                                    <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">✉️</div>
+                                <div class="info-content">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:info@autocarepro.com">info@autocarepro.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">🕒</div>
+                                <div class="info-content">
+                                    <h3>Hours of Operation</h3>
+                                    <p>
+                                        Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                        Saturday: 9:00 AM - 4:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">💬</div>
+                                <div class="info-content">
+                                    <h3>WhatsApp</h3>
+                                    <p>
+                                        <a href="https://wa.me/15551234567" target="_blank">
+                                            Chat with us on WhatsApp
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <p>🗺️ Map View</p>
+                                <p class="map-note">In a live site, this would display an interactive Google Maps embed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Service Banner -->
+        <section class="emergency-banner">
+            <div class="container">
+                <h2>Need Emergency Service?</h2>
+                <p>We offer roadside assistance and emergency repairs</p>
+                <a href="tel:+15551234567" class="btn btn-emergency">Call Now: (555) 123-4567</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AutoCare Pro</h3>
+                    <p>Your trusted partner for all auto repair needs. Quality service since 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 789 Centre Street, Calgary, AB T2P 1J9</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>✉️ info@autocarepro.com</li>
+                        <li>🕒 Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AutoCare Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.739 5.479 2.032 7.768L0 32l8.447-2.017A15.935 15.935 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.074 22.558c-.365.944-1.802 1.735-2.95 1.967-.771.154-1.771.277-5.143-1.107-4.321-1.77-7.105-6.137-7.318-6.417-.213-.28-1.733-2.305-1.733-4.397s1.094-3.12 1.484-3.545c.39-.424.851-.531 1.136-.531.285 0 .57.003.82.016.266.013.623-.1.974.744.36.867 1.229 2.998 1.336 3.215.107.216.179.469.036.749-.143.28-.214.455-.428.699-.213.244-.448.544-.64.73-.213.207-.435.43-.187.848.248.418 1.103 1.816 2.369 2.94 1.627 1.447 2.999 1.896 3.425 2.11.426.214.675.179.925-.107.25-.285.71-.821 1.137-1.357.304-.382.682-.43 1.094-.25.412.18 2.616 1.233 3.066 1.456.45.224.748.335.856.523.107.188.107 1.094-.257 2.038z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
